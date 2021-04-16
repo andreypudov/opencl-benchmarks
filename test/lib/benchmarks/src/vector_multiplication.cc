@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
 
-TEST(vector_multiplication, vector_multiplication_function) {
+TEST(vector_multiplication, multiply) {
   EXPECT_EQ(1, 1);
 }

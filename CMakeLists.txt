@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(opencl-benchmarks VERSION 0.0.1 LANGUAGES C)
+project(opencl-benchmarks VERSION 0.0.1 LANGUAGES C CXX)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -20,4 +20,4 @@ add_subdirectory("lib/benchmarks")
 enable_testing()
 add_subdirectory("test")
 
-install(TARGETS opencl-benchmarks DESTINATION bin/)
+install(TARGETS opencl-benchmarks DESTINATION bin)

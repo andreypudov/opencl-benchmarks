@@ -8,7 +8,8 @@ FetchContent_Declare(googlebenchmark GIT_REPOSITORY https://github.com/google/be
 FetchContent_MakeAvailable(googletest googlebenchmark)
 
 include_directories("${CMAKE_SOURCE_DIR}/include"
+                    "${CMAKE_SOURCE_DIR}/lib/benchmarks/include"
                     "${PROJECT_SOURCE_DIR}/include")
 
 add_executable(opencl-benchmarks "src/opencl-benchmarks.cc" "src/vector_multiplication.cc")
-target_link_libraries(opencl-benchmarks PRIVATE benchmark::benchmark)
+target_link_libraries(opencl-benchmarks PUBLIC benchmark::benchmark PRIVATE benchmarks)

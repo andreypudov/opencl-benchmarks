@@ -7,6 +7,6 @@ include_directories("${CMAKE_SOURCE_DIR}/include"
                     "${PROJECT_SOURCE_DIR}/include")
 
 add_executable(benchmarks-test "src/benchmarks.cc" "src/vector_multiplication.cc")
-target_link_libraries(benchmarks-test PUBLIC gtest gmock gtest_main PRIVATE benchmarks)
+target_link_libraries(benchmarks-test PRIVATE gtest gmock gtest_main benchmarks)
 
 add_test(COMMAND benchmarks-test)

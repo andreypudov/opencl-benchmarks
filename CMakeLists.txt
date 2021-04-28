@@ -16,8 +16,9 @@ set(CMAKE_C_CPPLINT clang-format; --dry-run; --Werror)
 
 add_subdirectory("src/opencl-benchmarks")
 add_subdirectory("lib/benchmarks")
+add_subdirectory("lib/opencl")
 
-enable_testing()
-add_subdirectory("test")
+# enable_testing()
+# add_subdirectory("test")
 
 install(TARGETS opencl-benchmarks DESTINATION bin)

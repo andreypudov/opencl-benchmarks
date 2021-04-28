@@ -2,10 +2,10 @@
 #include "gmock/gmock.h"
 
 extern "C" {
-#include "vector_multiplication.h"
+#include "vecmul.h"
 }
 
-TEST(vector_multiplication, multiply) {
+TEST(vector_multiplication, cpu_multiply) {
   const size_t length = 8;
 
   int vector_a[length] = {0, 1, 2, 3, 4, 5, 6, 7};
@@ -13,7 +13,7 @@ TEST(vector_multiplication, multiply) {
   int vector_c[length];
   int expected_c[length] = {0, 6, 10, 12, 12, 10, 6, 0};
 
-  multiply(vector_a, vector_b, vector_c, length);
+  cpu_multiply(vector_a, vector_b, vector_c, length);
 
   EXPECT_THAT(expected_c, testing::ContainerEq(vector_c));
 }

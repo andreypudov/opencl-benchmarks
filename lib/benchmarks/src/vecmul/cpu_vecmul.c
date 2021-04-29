@@ -1,7 +1,8 @@
 #include "vecmul.h"
+#include <math.h>
 
-void cpu_multiply(int *vector_a, int *vector_b, int *vector_c, size_t length) {
+void cpu_multiply(int *addend_a, int *addend_b, int *product, size_t length) {
   for (int index = 0; index < length; ++index) {
-    vector_c[index] = vector_a[index] * vector_b[index];
+    product[index] = atan(addend_a[index]) * atan(addend_b[index]);
   }
 }

@@ -15,5 +15,7 @@ include_directories("${OpenCL_INCLUDE_DIR}"
                     "${CMAKE_SOURCE_DIR}/lib/opencl/include"
                     "${PROJECT_SOURCE_DIR}/include")
 
-add_executable(opencl-benchmarks "src/opencl-benchmarks.cc" "src/vector_multiplication.cc")
+add_executable(opencl-benchmarks "src/opencl-benchmarks.cc"
+                                 "src/vecmul/cpu_vecmul.cc"
+                                 "src/vecmul/ocl_vecmul.cc")
 target_link_libraries(opencl-benchmarks PRIVATE OpenCL::OpenCL benchmark::benchmark opencl benchmarks)

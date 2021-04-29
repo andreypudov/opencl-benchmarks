@@ -1,5 +1,4 @@
 #include "opencl.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,7 +7,7 @@ cl_device_id select_opencl_device(cl_platform_id platform_id);
 
 enum { BUFFER_LENGTH = 1024 };
 
-int prepare_opencl_device(cl_params *params) {
+int prepare_opencl_device(cl_device_params *params) {
   char platform_buffer[BUFFER_LENGTH];
   char device_buffer[BUFFER_LENGTH];
   cl_int status = -1;

@@ -10,7 +10,5 @@ include_directories("${OpenCL_INCLUDE_DIR}"
 
 add_library(opencl STATIC "src/device.c"
                           "src/error.c"
-                          "src/kernel.c"
-                          "src/opencl.c"
                           "src/release.c")
 target_link_libraries(opencl PRIVATE OpenCL::OpenCL ${OpenCL_LIBRARIES})

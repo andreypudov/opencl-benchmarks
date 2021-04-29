@@ -21,4 +21,4 @@ static void CPU_VectorMultiplication(benchmark::State& state) {
   free(product);
 }
 
-BENCHMARK(CPU_VectorMultiplication);
+BENCHMARK(CPU_VectorMultiplication)->Unit(benchmark::kMillisecond);

@@ -41,4 +41,4 @@ static void OCL_VectorMultiplication(benchmark::State& state) {
   free(product);
 }
 
-BENCHMARK(OCL_VectorMultiplication);
+BENCHMARK(OCL_VectorMultiplication)->Unit(benchmark::kMillisecond);
